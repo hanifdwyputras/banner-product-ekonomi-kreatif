@@ -5,6 +5,7 @@ async function generate() {
 	// prepare
 	const canvas = new Canvas(500, 500);
 	const image = await resolveImage('./pexels.jpg');
+	const kelapa = await resolveImage('./kelapa.jpeg');
 
 	/** Set background */
 	canvas.printImage(image, 0, 0, 500, 500);
@@ -46,6 +47,9 @@ async function generate() {
 	.setTextFont('bold 40px Poppins')
 	.setTextAlign('center')
 	.printText('Coconut Ice cream', 500/2, (500/2)-20);
+
+	/** Print coconut image */
+	canvas.printCircularImage(kelapa, 500/2, (500/2)+120, 80);
 
 	/** Write file */
 	fs.writeFileSync('./result.png', await canvas.toBufferAsync('image/png'));
