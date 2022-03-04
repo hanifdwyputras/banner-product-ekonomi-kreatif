@@ -1,6 +1,6 @@
 {
-  "name": "IPS",
-  "packageManager": "yarn@3.1.1",
+  "name": "IPS_EkonomiKreatif",
+  "description": "Generate banner",
   "dependencies": {
     "canvas": "^2.9.0",
     "canvas-constructor": "^5.0.2"
